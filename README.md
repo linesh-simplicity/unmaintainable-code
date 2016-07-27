@@ -41,7 +41,7 @@
 
 #### 单·字母 变量名 Single Letter Variable Names
 
-如果你给变量命名为`a`、`b`、`c`等，那么别人就不可能通过简单的文本编辑器找到它们被引用的地方。同样也没人能猜到它们的用途。
+如果你给变量命名为`a`、`b`、`c`等，那么别人就不可能通过简单的文本编辑器找到它们的引用点。同样也没人能猜到它们的用途。
 
 If anyone even hints at breaking the tradition honoured since FØRTRAN of using `i`, `j`, and `k` for indexing variables, namely replacing them with `ii`, `jj` and `kk`, warn them about what the Spanish Inquisition did to heretics.
 
