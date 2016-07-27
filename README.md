@@ -61,39 +61,37 @@ Add an international flavor by spelling _tory_ or _tori_ in different theatres/t
 
 #### 多用同义词 Thesaurus Surrogatisation
 
-不要做无趣的人，请多用同义词来表达同一个意思，词汇越多越好，比如 _display_、_show_、_present_ 等。
-
-Vaguely hint there is some subtle difference, where none exists. However, if there are two similar functions that have a crucial difference, always use the same word in describing both functions (e.g. _print_ to mean "write to a file", "put ink on paper" and "display on the screen"). Under no circumstances, succumb to demands to write a glossary with the special purpose project vocabulary unambiguously defined. Doing so would be an unprofessional breach of the structured design principle of _information hiding_.
+不要做无趣的人，请多用同义词来表达同一个意思，词汇越多越好，比如 _display_、_show_、_present_ 等。善意地暗示一下变量之间可能有微妙的差别，最后他们会发现并没有。但是，当两个看似相似的函数其实却有重大的差别时，必须用一个同样的词来描述它们（比如，使用 _print（打印）_ 来表示“写文件”、“在屏幕上显示”等意）。无论何时，绝不允许为项目撰写一个术语表，并在其中准确无二地对项目上的专有词汇进行定义。这是极不专业的行为，完全违反了结构式编程的首要理念：_信息隐藏（information hiding）_。
 
 #### Use Plural Forms From Other Languages
 
 A VMS script kept track of the "statii" returned from various "Vaxen". Esperanto , [Klingon](http://www.kli.org/) and [Hobbitese](http://www.chriswetherell.com/hobbit/default.asp target=) qualify as languages for these purposes. For pseudo-Esperanto pluraloj, add oj. You will be doing your part toward world peace.
 
-#### CapiTaliSaTion
+#### 英文词重音处字母大写 CapiTaliSaTion
 
-Randomly capitalize the first letter of a syllable in the middle of a word. For example `ComputeRasterHistoGram()`.
+一个单词中间可能有一个或多个重音，此处字母应变大写。比如，`ComputeRasterHistoGram()`。
 
-#### Reuse Names
+#### 变量名重用 Reuse Names
 
-Wherever the rules of the language permit, give classes, constructors, methods, member variables, parameters and local variables the same names. For extra points, reuse local variable names inside `{}` blocks. The goal is to force the maintenance programmer to carefully examine the scope of every instance. In particular, in Java, make ordinary methods masquerade as constructors.
+不管你用的编程语言对命名有怎样的规范，请给所有类、构造方法、普通方法、成员变量、方法参数及局部变量等以相同的名字。对了，请在代码块`{}`中重用局部变量的名字。我们的目标是迫使维护人员必须仔细地检查每个变量、每个实例的作用域。在Java中，你还可以将普通函数写得跟真的构造方法一样。
 
-#### Åccented Letters
+#### 带声调的字母 Åccented Letters
 
-Use accented characters on variable names. E.g.
+使用带声调的字符做变量名。比如：
 
 ```c
 typedef struct { int i; } ínt;
 ```
 
-where the second ínt's í is actually i-acute. With only a simple text editor, it's nearly impossible to distinguish the slant of the accent mark.
+这里第二个ínt的í其实是阳平的i。只使用一般的文本编辑器，基本分辨不出那个小小的声调符号。
 
 #### Exploit Compiler Name Length Limits
 
 If the compiler will only distinguish the first, say, 8 characters of names, then vary the endings e.g. `var_unit_update()` in one case and `var_unit_setup()` in another. The compiler will treat both as `var_unit`.
 
-#### Underscore, a Friend Indeed
+#### 下划线，人类的好朋友 Underscore, a Friend Indeed
 
-Use `_` and `__` as identifiers.
+使用`_`和`__`做标识符。
 
 #### Mix Languages
 
