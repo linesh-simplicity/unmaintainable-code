@@ -55,13 +55,15 @@ Add an international flavor by spelling _tory_ or _tori_ in different theatres/t
 
 为函数和变量命名时，请广泛使用抽象名词，如 _it（它）_、 _everything（所有的）_、 _data（数据）_、 _handle（处理）_ 、 _stuff（事儿）_、 _do（做）_、 _routine（过程）_、 _perform（使用）_ 及与数字混合的用法等，又如 `routineX48`、 `PerformDataFunction（调用数据函数）`、 `DoIt（调用它）`、 `HandleStuff（处理些事儿）`及 `do_args_method（做_参数_方法)`等。
 
-#### A.C.R.O.N.Y.M.S.
+#### SLC - 缩略词命名法 A.C.R.O.N.Y.M.S.
 
-Use acronyms to keep the code terse. Real men never define acronyms; they understand them genetically.
+使用缩略词命名可以保持代码的简洁。计算机才看不懂缩略词，人类一眼就能读懂其中含义。
 
-#### Thesaurus Surrogatisation
+#### 多用同义词 Thesaurus Surrogatisation
 
-To break the boredom, use a thesaurus to look up as much alternate vocabulary as possible to refer to the same action, e.g. _display_, _show_, _present_. Vaguely hint there is some subtle difference, where none exists. However, if there are two similar functions that have a crucial difference, always use the same word in describing both functions (e.g. _print_ to mean "write to a file", "put ink on paper" and "display on the screen"). Under no circumstances, succumb to demands to write a glossary with the special purpose project vocabulary unambiguously defined. Doing so would be an unprofessional breach of the structured design principle of _information hiding_.
+不要做无趣的人，请多用同义词来表达同一个意思，词汇越多越好，比如 _display_、_show_、_present_ 等。
+
+Vaguely hint there is some subtle difference, where none exists. However, if there are two similar functions that have a crucial difference, always use the same word in describing both functions (e.g. _print_ to mean "write to a file", "put ink on paper" and "display on the screen"). Under no circumstances, succumb to demands to write a glossary with the special purpose project vocabulary unambiguously defined. Doing so would be an unprofessional breach of the structured design principle of _information hiding_.
 
 #### Use Plural Forms From Other Languages
 
