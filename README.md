@@ -1,9 +1,9 @@
-# How To Write Unmaintainable Code
+# 如何写出无法维护的代码
 
 ## Ensure a job for life ;-)
 
-**Roedy Green**
- [**Canadian Mind Products**](http://mindprod.com/jgloss/unmain.html)
+原文出处：[**Canadian Mind Products**](http://mindprod.com/jgloss/unmain.html)  
+作者：**Roedy Green**
 
 * * *
 
