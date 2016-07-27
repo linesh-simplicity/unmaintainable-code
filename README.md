@@ -13,35 +13,31 @@
 
 为了给Java市场创造更多的就业机会，我一直辛辛苦苦把这些秘诀代代相传。现在，我将把这些秘诀告诉你，告诉你如何写出非常难以维护的代码，如何写出让后来的人连改字都要提心吊胆的代码。如果你能够虔诚地遵循所有这些规则，我可以跟你保证，你将永远不用担心找不到工作。因为那时，除了你自己，已经没有人能够维护你写的代码。如果，你真的能好好地遵循并认真践行 **所有** 这些规则，那么即使你自己也维护不了自己写的代码！
 
-In the interests of creating employment opportunities in the Java programming field, I am passing on these tips from the masters on how to write code that is so difficult to maintain, that the people who come after you will take years to make even the simplest changes. Further, if you follow all these rules religiously, you will even guarantee **yourself** a lifetime of employment, since no one but you has a hope in hell of maintaining the code. Then again, if you followed **all** these rules religiously, even you wouldn't be able to maintain the code!
-
 但请不要做过头。代码不能让人一 **看** 就觉得失去了维护的希望，自然就好，否则可能会有风险，它可能会招致重写或重构。
 
-You don't want to overdo this. Your code should not **look** hopelessly unmaintainable, just **be** that way. Otherwise it stands the risk of being rewritten or refactored.
-
-## General Principles
+## 基本原则 General Principles
 
 > _Quidquid latine dictum sit, altum sonatur._
-> _- Whatever is said in Latin sounds profound._
+> _- What is said in Latin sounds profound._
 
-To foil the maintenance programmer, you have to understand how he thinks. He has your giant program. He has no time to read it all, much less understand it. He wants to rapidly find the place to make his change, make it and get out and have no unexpected side effects from the change.
+要防止其他程序员修改你的代码，你必须知道他们是怎么想的。他手里拿着这个庞大的程序，根本没有时间看完全部代码，更遑论理解它。他希望能快速找到他应该修改的地方，修了他的bug，确保没有没有产生任何副作用，然后就算万事大吉了。
 
-He views your code through a toilet paper tube. He can only see a tiny piece of your program at a time. You want to make sure he can never get at the big picture from doing that. You want to make it as hard as possible for him to find the code he is looking for. But even more important, you want to make it as awkward as possible for him to safely **ignore** anything.
+他看着你的代码，就像在看圣经。他能阅读的代码是有限的，每次都只能一点点慢慢读。而你要做的，就是让他读不出程序的结构和原理。你要让他难以找到他要找的代码，越难越好。但最重要的，还是要把代码写得越纠结越好。你要让他每个字符都不敢轻易跳过，哪怕是看起来无害的代码。
 
-Programmers are lulled into complacency by conventions. By every once in a while, by subtly violating convention, you force him to read every line of your code with a magnifying glass.
+正常的代码总是遵循一定的规范或惯例，因此程序员总是觉得他们读代码的能力很强。但若总是时不时地发现你的代码有些微妙的误导，不按惯例出牌，那么他们就需要举着个放大镜，一行一行地认真读你的代码了。
 
-You might get the idea that every language feature makes code unmaintainable -- not so, only if properly misused.
+你可能认为，语言的每个特性都可能使代码变得不忍卒读——其实不然，你必须恰当地将它们用于错误的地方才有这样的效果。
 
-## Naming
+## 命名 Naming
 
 > _"When I use a word," Humpty Dumpty said, in a rather scornful tone, "it means just what I choose it to mean - neither more nor less."_
 > - Lewis Carroll -- Through the Looking Glass, Chapter 6
 
-Much of the skill in writing unmaintainable code is the art of naming variables and methods. They don't matter at all to the compiler. That gives you huge latitude to use them to befuddle the maintenance programmer.
+编写不可维护代码所需的大部分技巧在于，掌握为变量和方法取名的艺术。编译器完全不关心变量的名称，这恰好给了你完全的自由，用它们来尽情戏耍后来的维护人员吧。
 
-#### New Uses For <cite>Names For Baby</cite>
+#### 宝宝取名法
 
-Buy a copy of a baby naming book and you'll never be at a loss for variable names. Fred is a wonderful name, and easy to type. If you're looking for easy-to-type variable names, try `asdf` or `aoeu` if you type with a DSK keyboard.
+入手一本宝宝取名大全，麻麻就再也不用担心我的变量命名了。Fred就是个很好的名字，很容易输入。如果你喜欢那些容易输入的变量名，`asdf`值得一试。如果你用的DSK键盘，那么`aoeu`你值得拥有。
 
 #### Single Letter Variable Names
 
