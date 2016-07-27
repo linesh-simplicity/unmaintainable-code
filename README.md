@@ -7,9 +7,9 @@
 
 * * *
 
-## Introduction
+## 前言 Introduction
 
-> _Never ascribe to malice, that which can be explained by incompetence._ - Napoleon
+> _可以用无能解释的事情，不要归咎于恶意。_ —— 拿破仑[^Napoleon]
 
 In the interests of creating employment opportunities in the Java programming field, I am passing on these tips from the masters on how to write code that is so difficult to maintain, that the people who come after you will take years to make even the simplest changes. Further, if you follow all these rules religiously, you will even guarantee **yourself** a lifetime of employment, since no one but you has a hope in hell of maintaining the code. Then again, if you followed **all** these rules religiously, even you wouldn't be able to maintain the code!
 
@@ -1370,3 +1370,10 @@ An early version of this article appeared in Java Developers' Journal (volume 2 
 This essay is a **joke**! I apologise if anyone took this literally. Canadians think it gauche to label jokes with a :-). People paid no attention when I harped about how to write __maintainable code. I found people were more receptive hearing all the goofy things people often do to muck it up. Checking for **un**maintainable design patterns is a rapid way to defend against malicious or inadvertent sloppiness.
 
 _**<small>The original was published on [Roedy Green's Mindproducts](http://mindprod.com/jgloss/unmain.html) site.</small>**_
+
+
+
+
+
+
+[^Napoleon]: 拿破仑名句，暂时引用自 [这里](http://webcache.googleusercontent.com/search?q=cache:D8L6wNLGfUEJ:www.master60.com.tw/master-quote.php%3Fid%3D114+&cd=4&hl=en&ct=clnk&gl=hk)
