@@ -15,6 +15,8 @@
 
 In the interests of creating employment opportunities in the Java programming field, I am passing on these tips from the masters on how to write code that is so difficult to maintain, that the people who come after you will take years to make even the simplest changes. Further, if you follow all these rules religiously, you will even guarantee **yourself** a lifetime of employment, since no one but you has a hope in hell of maintaining the code. Then again, if you followed **all** these rules religiously, even you wouldn't be able to maintain the code!
 
+但请不要做过头。代码不能让人一 **看** 就觉得失去了维护的希望，自然就好，否则可能会有风险，它可能会招致重写或重构。
+
 You don't want to overdo this. Your code should not **look** hopelessly unmaintainable, just **be** that way. Otherwise it stands the risk of being rewritten or refactored.
 
 ## General Principles
