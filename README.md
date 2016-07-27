@@ -51,9 +51,9 @@ If anyone even hints at breaking the tradition honoured since FØRTRAN of using 
 
 Add an international flavor by spelling _tory_ or _tori_ in different theatres/theaters.
 
-#### Be Abstract
+#### 要抽象 Be Abstract
 
-In naming functions and variables, make heavy use of abstract words like _it_, _everything_, _data_, _handle_, _stuff_, _do_, _routine_, _perform_ and the digits e.g. `routineX48`, `PerformDataFunction`, `DoIt`, `HandleStuff` and `do_args_method`.
+为函数和变量命名时，请广泛使用抽象名词，如 _it（它）_、 _everything（所有的）_、 _data（数据）_、 _handle（处理）_ 、 _stuff（事儿）_、 _do（做）_、 _routine（过程）_、 _perform（使用）_ 及与数字混合的用法等，又如 `routineX48`、 `PerformDataFunction（调用数据函数）`、 `DoIt（调用它）`、 `HandleStuff（处理些事儿）`及 `do_args_method（做_参数_方法)`等。
 
 #### A.C.R.O.N.Y.M.S.
 
