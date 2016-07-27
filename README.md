@@ -11,7 +11,7 @@
 
 > _可以用无能解释的事情，不要归咎于恶意。_ —— 拿破仑[^Napoleon]
 
-为了给Java市场创造更多的就业机会，我一直辛辛苦苦把这些秘诀代代相传。现在，我将把这些秘诀告诉你，告诉你如何写出非常难以维护的代码，如何写出让后来的人连改字都要提心吊胆的代码。如果你能够虔诚地遵循所有这些规则，我可以跟你保证，你将永远不用担心找不到工作。因为那时，除了你自己，已经没有人能够维护你写的代码。如果，你真的能好好地遵循并认真践行 **所有** 这些规则，即使是你自己也将无法维护自己所码的这些代码！
+为了给Java市场创造更多的就业机会，我一直辛辛苦苦把这些秘诀代代相传。现在，我将把这些秘诀告诉你，告诉你如何写出非常难以维护的代码，如何写出让后来的人连改字都要提心吊胆的代码。如果你能够虔诚地遵循所有这些规则，我可以跟你保证，你将永远不用担心找不到工作。因为那时，除了你自己，已经没有人能够维护你写的代码。如果，你真的能好好地遵循并认真践行 **所有** 这些规则，那么即使你自己也维护不了自己写的代码！
 
 In the interests of creating employment opportunities in the Java programming field, I am passing on these tips from the masters on how to write code that is so difficult to maintain, that the people who come after you will take years to make even the simplest changes. Further, if you follow all these rules religiously, you will even guarantee **yourself** a lifetime of employment, since no one but you has a hope in hell of maintaining the code. Then again, if you followed **all** these rules religiously, even you wouldn't be able to maintain the code!
 
