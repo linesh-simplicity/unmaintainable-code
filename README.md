@@ -39,13 +39,17 @@
 
 入手一本宝宝取名大全，麻麻就再也不用担心我的变量命名了。Fred就是个很好的名字，很容易输入。如果你喜欢那些容易输入的变量名，`asdf`值得一试。如果你用的DSK键盘，那么`aoeu`你值得拥有。
 
-#### Single Letter Variable Names
+#### 单·字母 变量名 Single Letter Variable Names
 
-If you call your variables `a`, `b`, `c`, then it will be impossible to search for instances of them using a simple text editor. Further, nobody will be able to guess what they are for. If anyone even hints at breaking the tradition honoured since FØRTRAN of using `i`, `j`, and `k` for indexing variables, namely replacing them with `ii`, `jj` and `kk`, warn them about what the Spanish Inquisition did to heretics.
+如果你给变量命名为`a`、`b`、`c`等，那么别人就不可能通过简单的文本编辑器找到它们被引用的地方。同样也没人能猜到它们的用途。
 
-#### Creative Miss-spelling
+If anyone even hints at breaking the tradition honoured since FØRTRAN of using `i`, `j`, and `k` for indexing variables, namely replacing them with `ii`, `jj` and `kk`, warn them about what the Spanish Inquisition did to heretics.
 
-If you must use descriptive variable and function names, misspell them. By misspelling in some function and variable names, and spelling it correctly in others (such as `SetPintleOpening` and `SetPintalClosing`) we effectively negate the use of grep or IDE search techniques. It works amazingly well. Add an international flavor by spelling _tory_ or _tori_ in different theatres/theaters.
+#### 创造性的拼写错误 Creative Miss-spelling
+
+若你无论如何必须使用有描述性的变量名，请至少把它们拼错。把一部分函数名或变量名拼错，然后把另一部分的拼对（比如`SetPintleOpening`和`SetPintalClosing`），这样可以有效地防止别人使用grep或者IDE自带的搜索技能。不得不说，改名的一小步，维护的一大步。
+
+Add an international flavor by spelling _tory_ or _tori_ in different theatres/theaters.
 
 #### Be Abstract
 
