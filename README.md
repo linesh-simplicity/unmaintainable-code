@@ -39,7 +39,7 @@
 
 上网买一本宝宝取名大全，麻麻就再也不用担心我的变量命名了。Fred就是个很好的名字，很容易输入。如果你喜欢那些容易输入的变量名，`asdf`值得一试。如果你用的DSK键盘，那么`aoeu`你值得拥有。
 
-#### 单·字母 变量名 Single Letter Variable Names
+#### 单·字母 变量名
 
 如果你给变量命名为`a`、`b`、`c`等，那么别人就不可能通过简单的文本编辑器找到它们的引用点。同样也没人能猜到它们的用途。
 
@@ -71,7 +71,7 @@ A VMS script kept track of the "statii" returned from various "Vaxen". Esperanto
 
 一个单词中间可能有一个或多个重音，此处字母应变大写。比如，`ComputeRasterHistoGram()`。
 
-#### 变量名重用 Reuse Names
+#### 变量名重用
 
 不管你用的编程语言对命名有怎样的规范，请给所有类、构造方法、普通方法、成员变量、方法参数及局部变量等以相同的名字。对了，请在代码块`{}`中重用局部变量的名字。因为这样能驱使维护人员仔细地检查每个变量、每个实例的作用域。在Java中，你还可以将普通函数写得跟真的构造方法一样。
 
@@ -85,7 +85,7 @@ typedef struct { int i; } ínt;
 
 这里第二个ínt的í其实是阳平的i。只使用一般的文本编辑器，基本分辨不出那个小小的声调符号。
 
-#### 善用编译器命名长度限制 Exploit Compiler Name Length Limits
+#### 善用编译器命名长度限制
 
 如果你的编译器只能识别有限长度的标识符，比如就说8个字符的名字吧，那么就让函数/变量名在8个字符之后才不同。比如 `var_unit_update()` 和 `var_unit_setup()`。这样编译器处理后它们都会被认为是 `var_unit`。
 
@@ -101,45 +101,45 @@ typedef struct { int i; } ínt;
 
 拓展ASCII编码是完美的变量名，并且还是合法的，比如ß，Ð及ñ等字符。如果你使用的是普通的文本编辑器，不复制粘贴你都不可能输入这样的字符。
 
-#### 来自其他语言的命名 Names From Other Languages
+#### 来自其他语言的命名
 
 给变量命名时，你还需要几本外文字典。比如， _point_ 不要用 _point_，要用德文的 _punkt_。后来的维护者如果没有你这样深厚扎实的德语功底，那么理解这些带有异国风味的变量名，对他们来说应该是种很美妙的体验。
 
-#### Names From Mathematics
+#### 使用数学名词
 
-Choose variable names that masquerade as mathematical operators, e.g.:
-
-```js
-openParen = (slash + asterix) / equals;
-```
-
-#### Bedazzling Names
-
-Choose variable names with irrelevant emotional connotation. e.g.:
+使用某些数学符号的英文做变量名，有时可以起到出其不意的效果：
 
 ```js
-marypoppins = (superman + starship) / god;
+openParen = (slash + asterix) / equals; // 译者注： 左括号 = (斜杠 + 星号) / 等于号
 ```
 
-This confuses the reader because they have difficulty disassociating the emotional connotations of the words from the logic they're trying to think about.
+#### 声东击西的名称 Bedazzling Names
 
+选用那些意义上毫无关联的词语组合做变量名：
 
-#### Rename and Reuse
+```js
+marypoppins = (superman + starship) / god; // 译者注： marypoppins = (超人 + 星际飞船) / 上帝；
+```
+
+这样能使得阅读者感到非常困惑，因为他们在竭力思考这段代码的实际的逻辑时，很难忍住不去想这些词语所描绘的形象。
+
+#### 重命名与重用
+
+这个技巧在Ada这样的语言中非常管用。（后面的不熟，还没翻）
 
 This trick works especially well in Ada, a language immune to many of the standard obfuscation techniques. The people who originally named all the objects and packages you use were morons. Rather than try to convince them to change, just use renames and subtypes to rename everything to names of your own devising. Make sure to leave a few references to the old names in, as a trap for the unwary.
 
-#### When To Use i
+#### 使用变量i的时机
 
-Never use `i` for the innermost loop variable. Use anything but. Use `i` liberally for any other purpose especially for non-int variables. Similarly use `n` as a loop index.
+永远不要使用 `i` 作为循环变量。用什么都可以，就是不要用 `i`。除此以外的场合，请大胆频繁地使用 `i` 来做变量名，尤其是用于命名非int型的变量时，特别管用。同理，使用 `n` 来命名循环中的索引变量。
 
 #### Conventions Schmentions
 
+编码时，不要遵从[Sun Java编码规范](http://java.sun.com/docs/codeconv/)中关于大小写的指示。毕竟，Sun自己就没有遵循。你不遵循这些规范，编译器也不会生气罢工。这样做的目标，是为了使变量名之间仅有大小写的微妙区别。如果你正在遵循前面提到的“单词重音处字母大写”的规则，这很好，并且你也可以在重音或分词有歧义的地方强行弄混大小写，比如这两个变量名： _input**F**ile**n**ame_ 和 _input**f**ile**N**ame_。放心地创造属于你自己的命名规范吧，只要它足够黑暗复杂。对于那些不遵循你这个命名规范的同事，斥责他们。
 
-Ignore the [Sun Java Coding Conventions](http://java.sun.com/docs/codeconv/), after all, Sun does. Fortunately, the compiler won't tattle when you violate them. The goal is to come up with names that differ subtlely only in case. If you are forced to use the capitalisation conventions, you can still subvert wherever the choice is ambigous, e.g. use *both* _input**F**ile**n**ame_ and _input**f**ile**N**ame_. Invent your own hopelessly complex naming conventions, then berate everyone else for not following them.
+#### 不觉得小写的l跟数字1天生相像么
 
-#### Lower Case l Looks a Lot Like the Digit 1
-
-Use lower case l to indicate long constants. e.g. `10l` is more likely to be mistaken for `101` that `10L` is. Ban any fonts that clearly disambiguate `uvw`, `wW`, `gq9`, `2z`, `5s`, `il17|!j`, `oO08`, `` `'" ``, `;,.`,  `m nn rn`, and `{[()]}`. Be creative.
+对于长整型（long型）的变量，使用小写l来暗示这一点。比如，`10l`相比`10L`更可能被误认为`101`。有些字体可以很清晰地看出下面这些组合的差别，如`uvw`、`wW`、`gq9`、`2z`、`5s`、`il17|!j`、`oO08`、`` `'" ``、`;,.`、`m nn rn`、`{[()]}`等。这样的字体，果断弃用。要有点追求。
 
 #### Reuse of Global Names as Private
 
