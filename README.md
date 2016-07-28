@@ -85,25 +85,25 @@ typedef struct { int i; } ínt;
 
 这里第二个ínt的í其实是阳平的i。只使用一般的文本编辑器，基本分辨不出那个小小的声调符号。
 
-#### Exploit Compiler Name Length Limits
+#### 善用编译器命名长度限制 Exploit Compiler Name Length Limits
 
-If the compiler will only distinguish the first, say, 8 characters of names, then vary the endings e.g. `var_unit_update()` in one case and `var_unit_setup()` in another. The compiler will treat both as `var_unit`.
+如果你的编译器只能识别有限长度的标识符，比如就说8个字符的名字吧，那么就让函数/变量名在8个字符之后才不同。比如 `var_unit_update()` 和 `var_unit_setup()`。这样编译器处理后它们都会被认为是 `var_unit`。
 
 #### 下划线，人类的好朋友 Underscore, a Friend Indeed
 
 使用`_`和`__`做标识符。
 
-#### Mix Languages
+#### 混用机器语言与自然语言 Mix Languages
 
-Randomly intersperse two languages (human or computer). If your boss insists you use his language, tell him you can organise your thoughts better in your own language, or, if that does not work, allege linguistic discrimination and threaten to sue your employers for a vast sum.
+在代码库中随机使用两种语言（人类语言与机器语言）相互点缀。如果你的老大坚决要你使用他的语言，你可以跟他委婉地解释一下，只有使用你自己的语言你才能更好地整理想法。如果他依然不让，指控他对你进行了语言歧视并威胁要勒索你一大笔钱。
 
-#### Extended ASCII
+#### 使用拓展ASCII编码 Extended ASCII
 
-Extended ASCII characters are perfectly valid as variable names, including ß, Ð, and ñ characters. They are almost impossible to type without copying/pasting in a simple text editor.
+拓展ASCII编码是完美的变量名，并且还是合法的，比如ß，Ð及ñ等字符。如果你使用的是普通的文本编辑器，不复制粘贴你都不可能输入这样的字符。
 
-#### Names From Other Languages
+#### 来自其他语言的命名 Names From Other Languages
 
-Use foreign language dictionaries as a source for variable names. For example, use the German _punkt_ for _point_. Maintenance coders, without your firm grasp of German, will enjoy the multicultural experience of deciphering the meaning.
+给变量命名时，你还需要几本外文字典。比如， _point_ 不要用 _point_，要用德文的 _punkt_。后来的维护者如果没有你这样深厚扎实的德语功底，那么理解这些带有异国风味的变量名，对他们来说应该是种很美妙的体验。
 
 #### Names From Mathematics
 
