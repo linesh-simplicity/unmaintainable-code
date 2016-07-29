@@ -141,27 +141,27 @@ This trick works especially well in Ada, a language immune to many of the standa
 
 对于长整型（long型）的变量，使用小写l来暗示这一点。比如，`10l`相比`10L`更可能被误认为`101`。有些字体可以很清晰地看出下面这些组合的差别，如`uvw`、`wW`、`gq9`、`2z`、`5s`、`il17|!j`、`oO08`、`` `'" ``、`;,.`、`m nn rn`、`{[()]}`等。这样的字体，果断弃用。要有点追求。
 
-#### Reuse of Global Names as Private
+#### 使用同名的private全局变量 Reuse of Global Names as Private
 
-Declare a global array in module A, and a private one of the same name in the header file for module B, so that it appears that it's the global array you are using in module B, but it isn't. Make no reference in the comments to this duplication.
+在模块A中声明一个全局数组，然后在模块B的头文件中声明一个同名的private数组。这样看起来似乎你是在使用模块B中的private变量，实则不然。请在文档中对此细节守口如瓶。
 
-#### Recycling Revisited
+#### 循环引用
 
-Use scoping as confusingly as possible by recycling variable names in contradictory ways. For example, suppose you have global variables `A` and `B`, and functions `foo` and `bar`. If you know that variable `A` will be regularly passed to `foo` and `B` to `bar`, make sure to define the functions as `function foo(B)` and `function bar(A)` so that inside the functions `A` will always be referred to as `B` and vice versa. With more functions and globals, you can create vast confusing webs of mutually contradictory uses of the same names.
+作用域用得好有奇效。比如通过某些相互矛盾的方式循环引用变量名，这样能极大地让阅读者感觉不适。举个例子，现在你有两个全部变量`A`和`B`，以及`foo`和`bar`两个函数，并且变量`A`一般会被传递给`foo`函数，变量`B`一般会被传递给`bar`参数。此种情形下，请保证把两个函数分别声明为`function foo(B)`及`function bar(A)`。这样在函数实现中，变量`A`将永远引用`B`，而`B`将永远引用`A`。熟练这个技巧后，你就可以在应用创建大量看起来自然无比，实则混乱矛盾的同名变量了。
 
-#### Recycle Your Variables
+#### 充分使用变量
 
-Wherever scope rules permit, reuse existing unrelated variable names. Similarly, use the same temporary variable for two unrelated purposes (purporting to save stack slots). For a fiendish variant, morph the variable, for example, assign a value to a variable at the top of a very long method, and then somewhere in the middle, change the meaning of the variable in a subtle way, such as converting it from a 0-based coordinate to a 1-based coordinate. Be certain not to document this change in meaning.
+只要不违反作用域约束，请尽量多重用已有的变量名。同样，使用一个同样的临时变量以，但服务于两个不同的计算流程（告诉大家这是为了节省栈内存）。对于复杂的计算流程，让变量含义有机会得以丰富演化。比如，在一个非常长方法的顶部为变量先赋个初值，然后在方法中间的某个部分，以某种不易觉察的方式改变变量的涵义，比如将它从极坐标系改成球坐标系的坐标等。同时，重要的事适宜多次强调：不要将此含义上的微妙变化写入文档。
 
 #### Cd wrttn wtht vwls s mch trsr
 
 When using abbreviations inside variable or method names, break the boredom with several variants for the same word, and even spell it out longhand once in while. This helps defeat those lazy bums who use text search to understand only some aspect of your program. Consider variant spellings as a variant on the ploy, e.g. mixing International _colour_, with American _color_ and dude-speak _kulerz_. If you spell out names in full, there is only one possible way to spell each name. These are too easy for the maintenance programmer to remember. Because there are so many different ways to abbreviate a word, with abbreviations, you can have several different variables that all have the same apparent purpose. As an added bonus, the maintenance programmer might not even notice they are separate variables.
 
-#### Misleading names
+#### 误导性的方法名
 
-Make sure that every method does a little bit more (or less) than its name suggests. As a simple example, a method named `isValid(x)` should as a side effect convert `x` to binary and store the result in a database.
+确保每个方法都比它的名字所显示的多做（或少做）一些事。我能给个简单的例子，一个叫`isValid(x)`的方法，应该同时把`x`转成二进制并写回到数据中。
 
-#### m_
+#### 前缀m_
 
 a naming convention from the world of C++ is the use of `m_` in front of members. This is supposed to help you tell them apart from methods, so long as you forget that "method" also starts with the letter "m".
 
