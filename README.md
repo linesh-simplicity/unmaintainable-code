@@ -163,13 +163,17 @@ When using abbreviations inside variable or method names, break the boredom with
 
 #### 前缀m_
 
+C++世界里有一种命名法，就是在成员变量名或成员方法名前加一个`m_`。
+
 a naming convention from the world of C++ is the use of `m_` in front of members. This is supposed to help you tell them apart from methods, so long as you forget that "method" also starts with the letter "m".
 
-#### o_apple obj_apple
+#### 为所有对象添加o或obj前缀
 
-Use an "o" or "obj" prefix for each instance of the class to show that you're thinking of the big, polymorphic picture.
+对于每个类实例，在其名字前添加前缀o或obj。这显得你很专业，表示你十分清楚它是类继承体系的一部分，并且时刻考虑着整个程序的架构。
 
-#### Hungarian Notation
+#### 匈牙利命名法
+
+
 
 Hungarian Notation is the tactical nuclear weapon of source code obfuscation techniques; use it! Due to the sheer volume of source code contaminated by this idiom nothing can kill a maintenance engineer faster than a well planned Hungarian Notation attack. The following tips will help you corrupt the original intent of Hungarian Notation:
 
