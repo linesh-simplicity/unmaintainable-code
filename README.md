@@ -173,7 +173,7 @@ a naming convention from the world of C++ is the use of `m_` in front of members
 
 #### 匈牙利命名法
 
-
+匈牙利命名法是源代码混淆技术界的战略核武器。
 
 Hungarian Notation is the tactical nuclear weapon of source code obfuscation techniques; use it! Due to the sheer volume of source code contaminated by this idiom nothing can kill a maintenance engineer faster than a well planned Hungarian Notation attack. The following tips will help you corrupt the original intent of Hungarian Notation:
 
@@ -196,7 +196,9 @@ Hungarian Notation is the tactical nuclear weapon of source code obfuscation tec
 
 #### Hungarian Notation Revisited
 
-One followon trick in the Hungarian notation is "change the type of a variable but leave the variable name unchanged". This is almost invariably done in windows apps with the migration from Win16:
+提到匈牙利命名法，有一个技巧在该命名法下非常实用：改变变量的类型，但不改变变量名。
+
+This is almost invariably done in windows apps with the migration from Win16:
 
 ```c
 WndProc(HWND hW, WORD wMsg, WORD wParam, LONG lParam)
@@ -207,6 +209,8 @@ to Win32
 ```c
 WndProc(HWND hW, UINT wMsg, WPARAM wParam, LPARAM lParam)
 ```
+
+上面的代码中`w`表明变量应该是word类型，但实际上它是一个长整型变量。当你把程序迁移成Win64时，这个技巧的真正价值才彰显。迁移后参数都是64位，但老的`w` `l`命名
 
 where the `w` values hint that they are words, but they really refer to longs. The real value of this approach comes clear with the Win64 migration, when the parameters will be 64 bits wide, but the old `w` and `l` prefixes will remain forever.
 
@@ -240,7 +244,7 @@ total += array[j+5]; */
 total += array[j+6 ];
 total += array[j+7 ];
 }
-```
+```*
 
 Without the colour coding would you notice that three lines of code are commented out?
 
